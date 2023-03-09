@@ -6,21 +6,24 @@ import Logo from '../Assets/Logo/Logo.png'
 const NavBar = () => {
   return (
     <div className={styles.container}>
-      <Link>
-        <div className={styles.logo_wrapper}>
-          <img src={Logo} className={styles.logo_img} alt='logo' /><span className={styles.company_name}>TrustNet</span>
-        </div>
 
-        <div>
-          <Link to='/'>Home</Link>
-          <Link to='about'>About</Link>
-          <Link to='categories'>Categories</Link>
-          <Link to='pricing'>Pricing</Link>
-          <Link to='contact'>Contact</Link>
-          <Link to='login'>Login</Link>
-          <Link to='signup'>Signup</Link>
+        <div className={styles.logo_container}>
+          <Link className={styles.logo_wrapper}>
+            <img src={Logo} className={styles.logo_img} alt='logo' />
+            <h1 className={styles.company_name}>TrustNet</h1>
+          </Link>
         </div>
-      </Link>
+      
+
+      <div>
+        <Link to='/' className={styles.nav_link}>Home</Link>
+        <Link to='about' className={styles.nav_link}>About</Link>
+        <Link to='categories' className={styles.nav_link}>Categories</Link>
+        <Link to='pricing' className={styles.nav_link}>Pricing</Link>
+        <Link to='contact' className={styles.nav_link}>Contact</Link>
+        <Link to='login' className={styles.nav_link}>Login</Link>
+        <Link to='signup' className={styles.nav_link}>Signup</Link>
+      </div>   
     </div>
   )
 }

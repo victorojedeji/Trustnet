@@ -1,8 +1,10 @@
+import styles from '../Components/HeroHeader.module.css'
+
 const HeroHeader = () => {
   return (
-    <div>
+    <section className={styles.container}>
       hero header
-    </div>
+    </section>
   )
 }
 
