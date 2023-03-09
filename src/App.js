@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Route, 
   createBrowserRouter, 
@@ -6,8 +5,8 @@ import {
   RouterProvider
 } from 'react-router-dom'
 
-// Pages
 
+// Pages
 import {
   SignUp,
   Login, 
@@ -20,6 +19,8 @@ import {
   MyAccount
   } from './Pages'
 
+// component
+import { NavBar } from './Components';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
 );
 const App = () => {
   return (
+
     <div>
       <RouterProvider router={router}/>
     </div>
