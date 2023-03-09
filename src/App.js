@@ -18,7 +18,7 @@ import {
   Pricing,
   Categories,
   MyAccount
-  } from './Page'
+  } from './Pages'
 
 
 const router = createBrowserRouter(
@@ -31,8 +31,8 @@ const router = createBrowserRouter(
         <Route path="about" element={<About />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="categories" element={<Categories />} />
-        <Route path="*" element={<NotFound />} />
         <Route path="my-account" element={<MyAccount />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
   )
 );
