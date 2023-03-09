@@ -1,3 +1,17 @@
+:root {
+  --Main-Bg: #ffffff;
+}
+
 .container {
   width: 100%;
+  background: var(--Main-Bg);
+}
+
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo_img {
+  width: 60px;
 }
