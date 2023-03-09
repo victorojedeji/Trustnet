@@ -24,7 +24,7 @@ import { NavBar } from './Components';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-      <Route>
+      <Route path="/" element={<NavBar />}>
         <Route path="/" element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="signup" element={<SignUp />} />
@@ -39,7 +39,6 @@ const router = createBrowserRouter(
 );
 const App = () => {
   return (
-
     <div>
       <RouterProvider router={router}/>
     </div>
