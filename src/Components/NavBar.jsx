@@ -1,8 +1,8 @@
-import styles from '../Components/NavBar'
+import styles from '../Components/NavBar.module.css'
 
 const NavBar = () => {
   return (
-    <div>
+    <div className={styles.container}>
       NavBar
     </div>
   )
