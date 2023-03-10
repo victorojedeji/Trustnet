@@ -3,9 +3,11 @@ import {
   Footer,
 } from '../Components'
 
+import styles from '../Pages/Home.module.css'
+
 const Home = () => {
   return (
-    <div>
+    <div className={styles.home_container}>
       <HeroHeader />
       <Footer />
     </div>

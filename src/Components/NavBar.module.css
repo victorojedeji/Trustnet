@@ -4,7 +4,18 @@
   --Text-Color-1: #ffffff;
 }
 
-.container {
+.NavBar_container {
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .NavBar_container {
+    display: none;
+  }
+}
+
+.nav_container {
   width: 100%;
   background: var(--Main-Bg);
   display: flex;
@@ -19,7 +30,6 @@
 .logo_wrapper {
   display: flex;
   align-items: center;
-  margin-right: auto;
   text-decoration: none;
 }
 
@@ -29,6 +39,10 @@
 
 .company_name {
   color: var(--Text-Color-1);
+}
+
+.link_wrapper {
+  margin-left: 4em;
 }
 
 .nav_link {
