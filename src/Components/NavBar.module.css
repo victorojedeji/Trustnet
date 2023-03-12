@@ -6,6 +6,7 @@
 
 .NavBar_container {
   width: 100%;
+  position: relative;
 }
 
 
@@ -33,19 +34,8 @@
 
 .company_name {
   color: var(--Text-Color-1);
+  text-decoration: none;
 }
-
-.link_wrapper {
-  margin-left: 4em;
-  display: block;
-}
-
-@media only screen and (max-width: 1023px) {
-  .link_wrapper {
-    display: none;
-  }
-}
-
 
 .nav_link {
   text-decoration: none;
@@ -53,6 +43,10 @@
   margin-right: 1.5em;
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.nav_toggle {
+  background: inherit;
 }
 
 .nav_toggle_wrapper {

@@ -1,5 +1,6 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import styles from '../Components/NavBar.module.css'
+import { IoSearchSharp } from "react-icons/io5";
 import {Link, ScrollRestoration, Outlet} from 'react-router-dom'
 import Logo from '../Assets/Logo/Logo.png'
 
@@ -12,6 +13,13 @@ const NavBar = () => {
   }
 
 
+  useEffect(() => {
+    drawer
+    ? document.querySelector("body").classList.add("active")
+    : document.querySelector("body").classList.remove("active");
+  }, [drawer])
+
+  
   return (
     <div className={styles.NavBar_container}>
       <ScrollRestoration />
@@ -22,7 +30,7 @@ const NavBar = () => {
             <h1 className={styles.company_name}>TrustNet</h1>
           </Link>
         </div>
-        <div className={`${styles.link_wrapper} ${styles.active}`}>
+        <div className='link_wrapper'>
           <Link to='/' className={styles.nav_link}>Home</Link>
           <Link to='about' className={styles.nav_link}>About</Link>
           <Link to='categories' className={styles.nav_link}>Categories</Link>
@@ -30,13 +38,22 @@ const NavBar = () => {
           <Link to='contact' className={styles.nav_link}>Contact</Link>
           <Link to='login' className={styles.nav_link}>Login</Link>
           <Link to='signup' className={styles.nav_link}>Signup</Link>
+        </div>
+
+        <div className={styles.search_icon_wrapper}>
+          <button className={styles.nav_search_button} aria-controls='navigation-drawer' aria-expanded='false'>
+            <IoSearchSharp />
+          </button>
         </div> 
 
-        <div className={styles.nav_toggle_wrapper}>
+        <div className={styles.nav_toggle_wrapper} onClick={showDrawer}>
           <button className={styles.nav_toggle} aria-controls='navigation-drawer' aria-expanded='false'>
-            <svg className={styles.hamburger} stroke='#000000' viewBox='0 0 100 100' width={20}>
-              <path></path>
-            </svg>
+          <svg stroke="#fff" className="button-two" viewBox="0 0 100 100" width="25">
+            <line className="line top" x1="90" x2="10" y1="40" y2="40" strokeWidth="10" strokeLinecap="round" strokeDasharray="80" strokeDashoffset="0">
+            </line>
+            <line className="line bottom" x1="10" x2="90" y1="60" y2="60" strokeWidth="10" strokeLinecap="round" strokeDasharray="80" strokeDashoffset="0">
+            </line>
+          </svg>
           </button>
         </div> 
       </nav>
