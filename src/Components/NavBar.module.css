@@ -6,14 +6,8 @@
 
 .NavBar_container {
   width: 100%;
-  display: block;
 }
 
-@media only screen and (max-width: 1023px) {
-  .NavBar_container {
-    display: none;
-  }
-}
 
 .nav_container {
   width: 100%;
@@ -43,7 +37,15 @@
 
 .link_wrapper {
   margin-left: 4em;
+  display: block;
 }
+
+@media only screen and (max-width: 1023px) {
+  .link_wrapper {
+    display: none;
+  }
+}
+
 
 .nav_link {
   text-decoration: none;
@@ -52,3 +54,8 @@
   font-size: 1.1rem;
   font-weight: 700;
 }
+
+.nav_toggle_wrapper {
+  
+}
+

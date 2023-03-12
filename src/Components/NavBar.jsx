@@ -1,9 +1,17 @@
+import {React, useState} from 'react'
 import styles from '../Components/NavBar.module.css'
 import {Link, ScrollRestoration, Outlet} from 'react-router-dom'
 import Logo from '../Assets/Logo/Logo.png'
 
 
 const NavBar = () => {
+  const [drawer, setDrawer] = useState(false);
+
+  const showDrawer = () => {
+    setDrawer(!drawer)
+  }
+
+
   return (
     <div className={styles.NavBar_container}>
       <ScrollRestoration />
@@ -14,7 +22,7 @@ const NavBar = () => {
             <h1 className={styles.company_name}>TrustNet</h1>
           </Link>
         </div>
-        <div className={styles.link_wrapper}>
+        <div className={`${styles.link_wrapper} ${styles.active}`}>
           <Link to='/' className={styles.nav_link}>Home</Link>
           <Link to='about' className={styles.nav_link}>About</Link>
           <Link to='categories' className={styles.nav_link}>Categories</Link>
@@ -22,7 +30,15 @@ const NavBar = () => {
           <Link to='contact' className={styles.nav_link}>Contact</Link>
           <Link to='login' className={styles.nav_link}>Login</Link>
           <Link to='signup' className={styles.nav_link}>Signup</Link>
-        </div>  
+        </div> 
+
+        <div className={styles.nav_toggle_wrapper}>
+          <button className={styles.nav_toggle} aria-controls='navigation-drawer' aria-expanded='false'>
+            <svg className={styles.hamburger} stroke='#000000' viewBox='0 0 100 100' width={20}>
+              <path></path>
+            </svg>
+          </button>
+        </div> 
       </nav>
       <Outlet />
     </div>
