@@ -16,9 +16,48 @@ body {
   display: block;
 }
 
+.nav_toggle_wrapper {
+  margin-left: 1em;
+  display: none;
+}
+
+.nav_toggle {
+  background: inherit;
+  outline: none;
+  border: none;
+}
+
+.search_icon_wrapper {
+  margin-left: 1em;
+  display: none;
+}
+
+.nav_search_button {
+  background: inherit;
+  outline: none;
+  border: none;
+  color: var(--Text-Color-1);
+}
+
+.IoSearchSharp {
+  font-size: 1.2rem;
+}
+
 
 @media only screen and (max-width: 1023px) {
+  .nav_toggle_wrapper {
+    display: block;
+  }
+
+  .search_icon_wrapper {
+    display: block;
+  }
+
   .link_wrapper {
+    display: none;
+  }
+
+  .link_wrapper.active {
     position: absolute;
     top: 5.5rem;
     right: 0;
@@ -32,14 +71,8 @@ body {
     justify-content: baseline;
     gap: .8em;
     padding: 0 4em;
-    display: none;
   }
 }
-
-
-/* .button-two {
-  --button-color: #232;
-} */
 
 .button-two :is(.top, .bottom) {
   animation: to-open-icon 1s forwards;

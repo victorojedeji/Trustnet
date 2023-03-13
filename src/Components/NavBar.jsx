@@ -12,7 +12,6 @@ const NavBar = () => {
     setDrawer(!drawer)
   }
 
-
   useEffect(() => {
     drawer
     ? document.querySelector("body").classList.add("active")
@@ -30,7 +29,8 @@ const NavBar = () => {
             <h1 className={styles.company_name}>TrustNet</h1>
           </Link>
         </div>
-        <div className='link_wrapper'>
+        
+        <div className={drawer ? 'link_wrapper active' : 'link_wrapper'}>
           <Link to='/' className={styles.nav_link}>Home</Link>
           <Link to='about' className={styles.nav_link}>About</Link>
           <Link to='categories' className={styles.nav_link}>Categories</Link>
@@ -40,21 +40,23 @@ const NavBar = () => {
           <Link to='signup' className={styles.nav_link}>Signup</Link>
         </div>
 
-        <div className={styles.search_icon_wrapper}>
-          <button className={styles.nav_search_button} aria-controls='navigation-drawer' aria-expanded='false'>
-            <IoSearchSharp />
+        <div className='search_icon_wrapper'>
+          <button className='nav_search_button' aria-controls='navigation-drawer' aria-expanded='false'>
+            <IoSearchSharp className='IoSearchSharp' />
           </button>
         </div> 
 
-        <div className={styles.nav_toggle_wrapper} onClick={showDrawer}>
-          <button className={styles.nav_toggle} aria-controls='navigation-drawer' aria-expanded='false'>
-          <svg stroke="#fff" className="button-two" viewBox="0 0 100 100" width="25">
-            <line className="line top" x1="90" x2="10" y1="40" y2="40" strokeWidth="10" strokeLinecap="round" strokeDasharray="80" strokeDashoffset="0">
-            </line>
-            <line className="line bottom" x1="10" x2="90" y1="60" y2="60" strokeWidth="10" strokeLinecap="round" strokeDasharray="80" strokeDashoffset="0">
-            </line>
-          </svg>
-          </button>
+        <div className='reset preload'>
+          <div className='nav_toggle_wrapper' onClick={showDrawer}>
+            <button className='nav_toggle' aria-controls='navigation-drawer' aria-expanded='false'>
+            <svg stroke="#fff" className="button-two" viewBox="0 0 100 100" width="25">
+              <line className="line top" x1="90" x2="10" y1="40" y2="40" strokeWidth="10" strokeLinecap="round" strokeDasharray="80" strokeDashoffset="0">
+              </line>
+              <line className="line bottom" x1="10" x2="90" y1="60" y2="60" strokeWidth="10" strokeLinecap="round" strokeDasharray="80" strokeDashoffset="0">
+              </line>
+            </svg>
+            </button>
+          </div>
         </div> 
       </nav>
       <Outlet />
