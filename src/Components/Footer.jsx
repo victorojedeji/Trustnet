@@ -105,19 +105,19 @@ const Footer = () => {
               Follow us on
             </li>
             <li className={styles.footer_link_wrapper}>
-              <Link to='#' className={styles.footer_link}><IoLogoInstagram/></Link>
+              <Link to='#' className={styles.footer_link}><IoLogoInstagram className={styles.footer_icon}/></Link>
             </li>
             <li className={styles.footer_link_wrapper}>
-              <Link to='#' className={styles.footer_link}><IoLogoFacebook/></Link>
+              <Link to='#' className={styles.footer_link}><IoLogoFacebook className={styles.footer_icon}/></Link>
             </li>
             <li className={styles.footer_link_wrapper}>
-              <Link to='#' className={styles.footer_link}><IoLogoTwitter/></Link>
+              <Link to='#' className={styles.footer_link}><IoLogoTwitter className={styles.footer_icon}/></Link>
             </li>
             <li className={styles.footer_link_wrapper}>
-              <Link to='#' className={styles.footer_link}><IoLogoLinkedin/></Link>
+              <Link to='#' className={styles.footer_link}><IoLogoLinkedin className={styles.footer_icon}/></Link>
             </li>
             <li className={styles.footer_link_wrapper}>
-              <Link to='#' className={styles.footer_link}><IoLogoYoutube/></Link>
+              <Link to='#' className={styles.footer_link}><IoLogoYoutube className={styles.footer_icon}/></Link>
             </li>
           </ul>
         </div>
