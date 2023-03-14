@@ -2,7 +2,13 @@ import React from 'react'
 import styles from '../Components/Footer.module.css'
 import {Link} from 'react-router-dom'
 import Logo from '../Assets/Logo/Logo.png'
-import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5";
+import { 
+  IoLogoFacebook, 
+  IoLogoInstagram, 
+  IoLogoLinkedin, 
+  IoLogoTwitter, 
+  IoLogoYoutube 
+} from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -13,122 +19,131 @@ const Footer = () => {
           <h1 className={styles.company_name}>TrustNet</h1>
         </Link>
       </div>
-      <div>
-        <div>
-          <ul>
-            <li>
+
+      <div className={styles.footer_nav}>
+        <div className={styles.first_nav_section}>
+          <ul className={styles.ul}>
+            <li className={styles.info_text}>
               About
             </li>
-            <li>
-              <Link>About Us</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>About Us</Link>
             </li>
-            <li>
-              <Link>Jobs</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Jobs</Link>
             </li>
-            <li>
-              <Link>Contact</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Contact</Link>
             </li>
-            <li>
-              <Link>Blog</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Blog</Link>
             </li>
-            <li>
-              <Link>How TrustNet works</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>How TrustNet works</Link>
             </li>
-            <li>
-              <Link>Transparency Report</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Transparency Report</Link>
             </li>
-            <li>
-              <Link>Press</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Press</Link>
             </li>
-            <li>
-              <Link>Investor Relations</Link>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Investor Relations</Link>
             </li>
           </ul>
         </div>
           
-        <div>
-          <li>
-            Community
-          </li>
-          <li>
-            <Link>TrustNet reviews</Link>
-          </li>
-          <li>
-            <Link>Help center</Link>
-          </li>
-          <li>
-            <Link>Log in</Link>
-          </li>
-          <li>
-            <Link>Sign Up</Link>
-          </li>
-          <li>
-            <Link to='#'>Chrome App</Link>
-          </li>
+        <div className={styles.second_nav_section}>
+          <ul className={styles.ul}>
+            <li className={styles.info_text}>
+              Community
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>TrustNet reviews</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Help center</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Log in</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Sign Up</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link to='#' className={styles.footer_link}>Chrome App</Link>
+            </li>
+          </ul>
         </div>
 
-        <div>
-          <li>
-            Businesses
-          </li>
-          <li>
-            <Link>TrustNet Business</Link>
-          </li>
-          <li>
-            <Link>Products</Link>
-          </li>
-          <li>
-            <Link>Plans & Pricing</Link>
-          </li>
-          <li>
-            <Link>Business Logic</Link>
-          </li>
-          <li>
-            <Link>Blog for Business</Link>
-          </li>
+        <div className={styles.third_nav_section}>
+          <ul className={styles.ul}>
+            <li className={styles.info_text}>
+              Businesses
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>TrustNet Business</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Products</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Plans & Pricing</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Business Logic</Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link className={styles.footer_link}>Blog for Business</Link>
+            </li>
+          </ul>
         </div>
 
-        <div>
-          <li>
-            Follow us on
-          </li>
-          <li>
-            <Link to='#'><IoLogoInstagram/></Link>
-          </li>
-          <li>
-            <Link to='#'><IoLogoFacebook/></Link>
-          </li>
-          <li>
-            <Link to='#'><IoLogoTwitter/></Link>
-          </li>
-          <li>
-            <Link to='#'><IoLogoLinkedin/></Link>
-          </li>
-          <li>
-            <Link to='#'><IoLogoYoutube/></Link>
-          </li>
+        <div className={styles.forth_nav_section}>
+          <ul className={styles.ul}>
+            <li className={styles.info_text}>
+              Follow us on
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link to='#' className={styles.footer_link}><IoLogoInstagram/></Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link to='#' className={styles.footer_link}><IoLogoFacebook/></Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link to='#' className={styles.footer_link}><IoLogoTwitter/></Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link to='#' className={styles.footer_link}><IoLogoLinkedin/></Link>
+            </li>
+            <li className={styles.footer_link_wrapper}>
+              <Link to='#' className={styles.footer_link}><IoLogoYoutube/></Link>
+            </li> className={styles.footer_link_wrapper}
+          </ul>
         </div>
       </div>
 
-      <div>
-        <li>
-          <Link to='#'>Legal</Link>
-        </li>
-        <li>
-          <Link to='#'>Privacy Policy</Link>
-        </li>
-        <li>
-          <Link to='#'>Terms and Condition</Link>
-        </li>
-        <li>
-          <Link to='#'>Guidlines for Reviewers</Link>
-        </li>
-        <li>
-          <Link to='#'>System status</Link>
-        </li>
+      <div className={styles.fifth_nav_section}>
+        <ul className={styles.ul}>
+          <li className={styles.footer_link_wrapper}>
+            <Link to='#' className={styles.footer_link}>Legal</Link>
+          </li>
+          <li className={styles.footer_link_wrapper}>
+            <Link to='#' className={styles.footer_link}>Privacy Policy</Link>
+          </li>
+          <li className={styles.footer_link_wrapper}>
+            <Link to='#' className={styles.footer_link}>Terms and Condition</Link>
+          </li>
+          <li className={styles.footer_link_wrapper}>
+            <Link to='#' className={styles.footer_link}>Guidlines for Reviewers</Link>
+          </li>
+          <li className={styles.footer_link_wrapper}>
+            <Link to='#' className={styles.footer_link}>System status</Link>
+          </li>
+        </ul>
       </div>
 
-      <h1>2023 TrustNet, Inc. All rights reserved.</h1>
+      <h1 className={styles.info_text}>2023 TrustNet, Inc. All rights reserved.</h1>
     </footer>
   )
 }

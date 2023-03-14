@@ -1,6 +1,6 @@
 .footer_container {
   background-color: var(--Main-Bg);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .logo_container {
@@ -20,5 +20,6 @@
 .company_name {
   color: var(--Text-Color-1);
   text-decoration: none;
+  font-size: 1.3rem;
 }
 
