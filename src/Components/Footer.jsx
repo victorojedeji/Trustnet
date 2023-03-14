@@ -118,7 +118,7 @@ const Footer = () => {
             </li>
             <li className={styles.footer_link_wrapper}>
               <Link to='#' className={styles.footer_link}><IoLogoYoutube/></Link>
-            </li> className={styles.footer_link_wrapper}
+            </li>
           </ul>
         </div>
       </div>
