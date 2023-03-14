@@ -20,7 +20,7 @@ const NavBar = () => {
 
   
   return (
-    <div className={styles.NavBar_container}>
+    <header className={styles.NavBar_container}>
       <ScrollRestoration />
       <nav className={styles.nav_container}>
         <div className={styles.logo_container}>
@@ -60,7 +60,7 @@ const NavBar = () => {
         </div> 
       </nav>
       <Outlet />
-    </div>
+    </header>
   )
 }
 

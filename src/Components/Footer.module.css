@@ -1,0 +1,24 @@
+.footer_container {
+  background-color: var(--Main-Bg);
+  height: 100vh;
+}
+
+.logo_container {
+  margin-right: auto;
+}
+
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo_img {
+  width: 60px;
+}
+
+.company_name {
+  color: var(--Text-Color-1);
+  text-decoration: none;
+}
+
