@@ -21,6 +21,12 @@
   outline: none;
 }
 
+.button_holder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
 .arrow {
   width: 45px;
   height: 45px;

@@ -29,9 +29,11 @@ function CategorySection() {
     </div>
 
     <div className={styles.review_container}>
-      <button className={styles.arrow} onClick={handlePreviousSlide} style={{ opacity: currentSlide < 1 ? 0 : 1 }}>
-        <IoArrowBack className={styles.arrow_forward}/>
-      </button>
+      <div className={styles.button_holder}>
+        <button className={styles.arrow} onClick={handlePreviousSlide} style={{ display : currentSlide < 1 ? "none" : "block" }}>
+          <IoArrowBack className={styles.arrow_forward}/>
+        </button>
+      </div>
       <div className={styles.review_board}>
         {categories[currentSlide].cards.map((card) => (
           <div key={card.id} className={styles.review_card}>
@@ -39,9 +41,11 @@ function CategorySection() {
           </div>
         ))}
       </div>
-      <button className={styles.arrow} onClick={handleNextSlide} style={{ opacity: currentSlide === 0 ? 1 : 0  }}>
-        <IoArrowForward className={styles.arrow_back}/>
-      </button>
+      <div className={styles.button_holder}>
+        <button className={styles.arrow} onClick={handleNextSlide} style={{ display: currentSlide === 0 ? "block" : "none"  }}>
+          <IoArrowForward className={styles.arrow_back}/>
+        </button>
+      </div>
     </div>
   </div>
   );
