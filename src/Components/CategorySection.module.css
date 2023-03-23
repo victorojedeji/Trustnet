@@ -1,0 +1,56 @@
+.category_section {
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+
+.category_section_header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6.5em;
+  padding-right: 6.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+.category_btn {
+  padding: .7em 2.5em;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 2em;
+  outline: none;
+}
+
+.arrow {
+  width: 45px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+
+.review_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.review_board {
+  display: grid;
+  width: 85%;
+  grid-template-columns: auto auto auto auto;
+  overflow-y: auto;
+  gap: 1.72em;
+}
+
+.review_card {
+  padding: 1.5em 2em;
+  border: 1px solid black;
+  width: 265px;
+  display: flex;
+  align-items: center;
+  font-size: .9rem;
+}
